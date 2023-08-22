@@ -1,0 +1,118 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    background-color: $white;
+
+    .imageArea {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        transition: all ease 0.5s;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .wrapper {
+        position: relative;
+
+        margin: 0px 0px 12px 26px;
+        padding: 12px 26px 0px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        max-width: max-content;
+        z-index: 999;
+        background-color: $white;
+
+        .nftName {
+            color: $black;
+
+            font-size: 40px;
+
+            font-weight: 600;
+
+            letter-spacing: -1.6px;
+        }
+
+        .title {
+            color: $silver;
+
+            font-size: 24px;
+
+            font-weight: 400;
+        }
+    }
+
+    .rectangle {
+        position: absolute;
+
+        top: 26px;
+        bottom: 26px;
+        left: 26px;
+        right: 26px;
+        z-index: 0;
+        border: 1.5px solid rgba($black, 0.5);
+    }
+
+    .linkArea {
+        display: flex;
+        padding: 8px 12px;
+        align-items: center;
+        gap: 4px;
+        border-radius: 4px;
+        background: $white;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: all ease 1s;
+
+        .link {
+            color: $black;
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            letter-spacing: -0.72px;
+        }
+    }
+
+    &:hover {
+        .imageArea {
+            filter: blur(8px);
+        }
+
+        .linkArea {
+            display: flex;
+            opacity: 1;
+        }
+
+        box-shadow: rgba($blue, 0.3) 0px 24px 12px;
+    }
+}
+
+@include media(small) {
+    .card {
+        width: 300px;
+        height: 400px;
+        .imageArea {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .linkArea {
+            .link {
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Header from "@/components/Header";
 
 import Hero from "@/components/Hero";
-
+import Auction from "@/components/Auction";
 export default function Home() {
   return (
     <>
@@ -15,6 +15,7 @@ export default function Home() {
           <Hero />
         </div>
       </div>
+      <Auction />
     </>
   );
 }
