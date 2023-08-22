@@ -3,6 +3,8 @@ import styles from "./styles.module.scss";
 import clsx from "clsx";
 import Header from "@/components/Header";
 
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
     <>
@@ -10,6 +12,7 @@ export default function Home() {
         <AnimatedBackground />
         <div className={clsx(styles.home, "container")}>
           <Header />
+          <Hero />
         </div>
       </div>
     </>
