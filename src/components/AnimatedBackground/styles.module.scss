@@ -1,0 +1,98 @@
+$animation-duration: 60s;
+
+.wrapper {
+    background: $violet;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+.animationItem {
+    position: absolute;
+    border-radius: 50%;
+
+    height: 100%;
+    width: 50%;
+    filter: blur(80px);
+    animation-duration: $animation-duration;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.animationItemTop {
+    @extend .animationItem;
+
+    background: linear-gradient(80deg, $light-purple, $blue);
+    animation-name: rotate360, moveDown;
+}
+
+.animationItemBottom {
+    @extend .animationItem;
+
+    background: linear-gradient(80deg, $light-purple, $pink);
+    animation-name: rotate360, moveUp;
+}
+
+.animationItemLeft {
+    @extend .animationItem;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(80deg, $light-purple, $violet);
+    animation-name: rotate360, moveLeft;
+}
+
+.animationItemRight {
+    @extend .animationItem;
+
+    background: linear-gradient(80deg, $light-purple, $light-pink);
+    animation-name: rotate360, moveRight;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 90%;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 90%;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 90%;
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 90%;
+    }
+}

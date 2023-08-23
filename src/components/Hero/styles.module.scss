@@ -1,0 +1,94 @@
+.hero {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 64px;
+    .wrapper {
+        display: flex;
+
+        flex-direction: column;
+
+        h1 {
+            color: $white;
+
+            font-size: 120px;
+
+            font-weight: 700;
+            line-height: 120px;
+            letter-spacing: -2.4px;
+        }
+    }
+
+    .imageArea {
+        position: relative;
+        width: 448px;
+        height: 448px;
+        flex-shrink: 0;
+
+        animation: rotate360 120s ease infinite;
+    }
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@include media(xlarge) {
+    .hero {
+        .wrapper {
+            h1 {
+                font-size: 100px;
+
+                line-height: 100px;
+            }
+        }
+
+        .imageArea {
+            width: 380px;
+            height: 380px;
+        }
+    }
+}
+
+@include media(large) {
+    .hero {
+        .wrapper {
+            h1 {
+                font-size: 80px;
+
+                line-height: 80px;
+            }
+        }
+
+        .imageArea {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+@include media(medium) {
+    .hero {
+        .imageArea {
+            display: none;
+        }
+    }
+}
+
+@include media(small) {
+    .hero {
+        .wrapper {
+            h1 {
+                color: $white;
+                font-size: 60px;
+
+                line-height: 60px;
+            }
+        }
+    }
+}

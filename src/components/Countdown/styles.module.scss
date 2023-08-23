@@ -1,0 +1,86 @@
+.countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        .value {
+            color: rgba($black, 0.15);
+
+            font-size: 90px;
+
+            font-weight: 600;
+        }
+
+        .title {
+            color: rgba($black, 0.8);
+
+            font-size: 22px;
+
+            font-weight: 600;
+
+            letter-spacing: -0.48px;
+        }
+    }
+}
+
+@include media(xlarge) {
+    .countdown {
+        .item {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            .value {
+                font-size: 80px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@include media(large) {
+    .countdown {
+        .item {
+            &:not(:last-child) {
+                margin-right: 18px;
+            }
+
+            .value {
+                font-size: 52px;
+            }
+
+            .title {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@include media(small) {
+    .countdown {
+        .item {
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+            .value {
+                font-size: 42px;
+            }
+
+            .title {
+                font-size: 12px;
+            }
+        }
+    }
+}
