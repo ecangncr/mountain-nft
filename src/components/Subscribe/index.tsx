@@ -9,7 +9,7 @@ const Subscribe: React.FC = () => {
     <section
       id="subscribe"
       className={clsx(SecondaryFont.className, styles.subscribe)}>
-      <h2 className={styles.title}>We don't want to let you down</h2>
+      <h2 className={styles.title}>We don&apos;t want to let you down</h2>
       <p className={styles.info}>
         Get notify to our public mint sale event, make sure you didn’t miss it.
         Enter your email below, so we can invite you to join the party.

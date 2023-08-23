@@ -14,7 +14,7 @@ const Header: React.FC = () => {
         <Link href="#auction" className={styles.link}>
           Collections
         </Link>
-        <Link href="#" className={styles.link}>
+        <Link href="#footer" className={styles.link}>
           Foundation
         </Link>
       </nav>
